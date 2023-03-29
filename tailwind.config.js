@@ -12,7 +12,12 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+                noto: ['Noto Serif', 'serif']
             },
+            backgroundImage: {
+                'sideview': "url('/public/assets/images/bg-img-frontview.jpg')"
+            }
         },
     },
 
