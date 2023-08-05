@@ -16,7 +16,7 @@ module.exports = {
                 noto: ['Noto Serif', 'serif']
             },
             backgroundImage: {
-                'sideview': "url('/public/assets/images/bg-img-frontview.jpg')"
+                'sideview': "url('/public/assets/images/bg-img-sideview.jpg')"
             }
         },
     },
