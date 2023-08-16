@@ -1,9 +1,8 @@
 <?php
 
+use App\Http\Controllers\Main\Admin\DashboardController;
+use App\Http\Controllers\Main\Students\StudentRaterFormController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Livewire\Form\StudentRater;
-// Form
-use App\Http\Livewire\Form\PeerRater;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,8 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // Form Page
-    Route::get('/peer-rater-form', PeerRater::class)->name('peer-rater-form');
-    Route::get('/student-rater-form', StudentRater::class)->name('student-rater-form');
+    // Route::get('/peer-rater-form', [PeerRaterController::class, 'index'])->name('peer-rater-form');
+    Route::get('/student-rater-form', [StudentRaterFormController::class, 'index'])->name('student-rater-form');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
 

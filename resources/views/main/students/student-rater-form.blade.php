@@ -1,0 +1,1 @@
+<livewire:students.student-rater-form />
